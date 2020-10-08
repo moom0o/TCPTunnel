@@ -1,0 +1,2 @@
+iptables -t nat -A PREROUTING -d YourVPSIPHere -p tcp --dport 32400 -j DNAT --to-dest 10.8.0.2:32400
+iptables -t filter -A INPUT -p tcp -d 10.8.0.2 --dport 32400 -j ACCEPT
